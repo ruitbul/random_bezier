@@ -5,7 +5,6 @@ color[] colArray = {
   color(189, 8, 59), 
   color(146, 137, 7),
   color(0, 56, 168),
- //color(20, 244, 50), 
 };
 
 float xloc = 0;
@@ -15,8 +14,6 @@ int margin = 10;
 
 void setup(){
   size(700, 900);
-  //noLoop();
- // frameRate(2);
 }
   
   
@@ -93,7 +90,6 @@ void draw(){
   bezierVertex(h1, h2, h3, h4, h5, h6);
   endShape(CLOSE);
   popMatrix();
+    }
+  }
 }
-}
-}
-//}
