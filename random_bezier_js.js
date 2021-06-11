@@ -1,12 +1,22 @@
+//As far as I can tell, this sketch has the same code as the Processing sketch. This sketch looks slightly different from the processing sketch, which has a different direction in the Bezier curves.
+
+//Adding sin() and cos() to where the shapes are being drawn adds some cool affects.
+
+
 let colArray = [];
+  
+// let c1 = color(29, 30, 31);
+// let c2 = color(189, 8, 59);
+// let c3 = color(62,73,84);
+// let c4 = color(146, 137, 7);
+// let c5 = color(0, 56, 168);
 
 
-
-  colArray.push(color(29,30,31));
-  colArray.push(color(62,73,84)); 
-  colArray.push(color(189, 8, 59)); 
-  colArray.push(color(146, 137, 7));
-  colArray.push(color(0, 56, 168));
+//   colArray.push(c1);
+//   colArray.push(c2); 
+//   colArray.push(c3); 
+//   colArray.push(c4);
+//   colArray.push(c5);
 
 
 let xloc = 0;
@@ -15,9 +25,24 @@ let margin = 10;
 
 function setup(){
   createCanvas(800, 600);
+
+
+
+  
+let c1 = color(29, 30, 31);
+let c2 = color(189, 8, 59);
+let c3 = color(62,73,84);
+let c4 = color(146, 137, 7);
+let c5 = color(0, 56, 168);
+
+
+  colArray.push(c1);
+  colArray.push(c2); 
+  colArray.push(c3); 
+  colArray.push(c4);
+  colArray.push(c5);
+  
 }
-  
-  
 function draw(){
   background(15, 20, 30);
   xloc += 0.03;
@@ -25,7 +50,8 @@ function draw(){
   
   for (i = margin; i<=width-margin; i+= grid) {
     for ( j = margin; j<=height-margin; j+= grid) {
-      var colArrayNum = random(5);
+      var colArrayNum = int(random(5));
+      //console.log(colArrayNum);
       stroke(colArray[colArrayNum]);
       strokeWeight(random(4));     
 
